@@ -1,0 +1,30 @@
+---
+title: "MyFirstMarkdownDocument"
+author: "Paul Lopez"
+date: "2022-12-17"
+output:
+  pdf_document: default
+  html_document: default
+---
+
+This is my first Markdown document.
+Let's install tinytex for pdf docs.
+```{r}
+tinytex::install_tinytex(force=TRUE)
+```
+
+Let's load some data.
+
+```{r}
+library(datasets)
+data(airquality)
+summary(airquality)
+```
+
+Now let's try material from Math530
+
+```{r}
+curve(dbeta(x, shape1 = 7, shape2 = 4), 0, 1)
+abline(h = dbeta(0.3668031, shape1 = 7, shape2 = 4), col="red")
+```
+
